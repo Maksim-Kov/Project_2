@@ -70,15 +70,15 @@ $fontFamily: 'Heebo', sans-serif;
 @font-face {
 	font-family: 'icomoon';
 	src:
-	  url('../fonts/icomoon.ttf?vlah78') format('truetype'),
-	  url('../fonts/icomoon.woff?vlah78') format('woff'),
-	  url('../fonts/icomoon.svg?vlah78#icomoon') format('svg');
+	url('../fonts/icomoon.ttf?vlah78') format('truetype'),
+	url('../fonts/icomoon.woff?vlah78') format('woff'),
+	url('../fonts/icomoon.svg?vlah78#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 	font-display: block;
-  }
-  
-  [class^="icon-"], [class*=" icon-"] {
+}
+
+[class^="icon-"], [class*=" icon-"] {
 	/* use !important to prevent issues with browser extensions that change fonts */
 	font-family: 'icomoon' !important;
 	speak: never;
@@ -87,24 +87,24 @@ $fontFamily: 'Heebo', sans-serif;
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
-  
+
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-  }
-  
-  .icon-fb:before {
+}
+
+.icon-fb:before {
 	content: "\e900";
-  }
-  .icon-insta:before {
+}
+.icon-insta:before {
 	content: "\e901";
-  }
-  .icon-linkedin:before {
+}
+.icon-linkedin:before {
 	content: "\e902";
-  }
-  .icon-twitter:before {
+}
+.icon-twitter:before {
 	content: "\e903";
-  }
+}
 
 // </ICON FONTS>===============================================================================================
 
@@ -146,6 +146,7 @@ $fontFamily: 'Heebo', sans-serif;
 }
 
 // <===! АДАПТИВНІСТЬ КАРТИНОК !=============================================================================
+
 .ibg {
 	position: relative;
 	img {
@@ -249,7 +250,7 @@ $fontFamily: 'Heebo', sans-serif;
 	}
 }
 
-// </BURGER MENU>=================================================================================================
+// </BURGER MENU>==================================================================================================================
 
 .menu {
 	// .menu__icon
@@ -307,9 +308,9 @@ $fontFamily: 'Heebo', sans-serif;
 	}
 }
 
-// </HEADER>======================================================================================================
+// </HEADER>=======================================================================================================================
 
-// <HOME PAGE>====================================================================================================
+// <HOME PAGE>=====================================================================================================================
 
 .hello {
 	padding: 38px 0 70px 0;
@@ -387,7 +388,7 @@ $fontFamily: 'Heebo', sans-serif;
 	}
 }
 
-// <BUTTON>=======================================================================================================================
+// <BUTTON>========================================================================================================================
 
 .btn {
 	background-color: #ff6464;
@@ -409,9 +410,9 @@ $fontFamily: 'Heebo', sans-serif;
 	}
 }
 
-// </BUTTON>======================================================================================================================
+// </BUTTON>=======================================================================================================================
 
-// <SECTION RECENT-POSTS>=========================================================================================================
+// <SECTION RECENT-POSTS>==========================================================================================================
 
 .recent-posts {
 	background: #EDF7FA;
@@ -469,54 +470,52 @@ $fontFamily: 'Heebo', sans-serif;
 
 .recent-post {
 	height: 100%;
-		background: #fff;
-		box-shadow: 0px 4px 10px rgba(187, 225, 250, 0.25);
-		border-radius: 4px;
-		padding: 20px;
+	background: #fff;
+	box-shadow: 0px 4px 10px rgba(187, 225, 250, 0.25);
+	border-radius: 4px;
+	padding: 20px;
+	@media (max-width:$md3) {
+		padding: 15px;
+	}
+	*:last-child {
+		margin-bottom: 0;
+	}
+	// .recent-post__title
+	&__title {
+		display: inline-block;
+		color: inherit;
+		font-size: 2.6rem;
+		font-weight: 700;
+		line-height: 38 / 26 * 100%;
+		transition: color 0.2s ease-in-out 0.2s;
+		margin: 0 0 17px 0;
+		@media (min-width:$md2) {
+			&:hover {
+				color: #ff6464;
+			}
+		}
 		@media (max-width:$md3) {
-			padding: 15px;
+			font-size: 2.2rem;
+			margin: 0 0 10px 0;
 		}
-		*:last-child {
-			margin-bottom: 0;
+	}
+	// .recent-post__info
+	&__info {
+		margin: 0 0 15px 0;
+		font-size: 1.8rem;
+		line-height: 26 / 18 * 100%;
+		span {
+			margin: 0 10px;
 		}
-		// .recent-post__title
-		&__title {
-			display: inline-block;
-			color: inherit;
-			font-size: 2.6rem;
-			font-weight: 700;
-			line-height: 38 / 26 * 100%;
-			transition: color 0.2s ease-in-out 0.2s;
-			margin: 0 0 17px 0;
-			@media (min-width:$md2) {
-				&:hover {
-					color: #ff6464;
-				}
-			}
-			@media (max-width:$md3) {
-				font-size: 2.2rem;
-				margin: 0 0 10px 0;
-			}
+		@media (max-width:$md3) {
+			font-size: 1.6rem;
+			margin: 0 0 10px 0;
 		}
-		// .recent-post__info
-		&__info {
-			margin: 0 0 15px 0;
-			font-size: 1.8rem;
-			line-height: 26 / 18 * 100%;
-			span {
-				margin: 0 10px;
-			}
-			@media (max-width:$md3) {
-				font-size: 1.6rem;
-				margin: 0 0 10px 0;
-			}
-		}
-
-		// .recent-post__text
-
-		&__text {
-			margin: 0 0 15px 0;
-		}
+	}
+	// .recent-post__text
+	&__text {
+		margin: 0 0 15px 0;
+	}
 }
 
 // </SECTION RECENT-POSTS>=========================================================================================================
@@ -763,7 +762,7 @@ $fontFamily: 'Heebo', sans-serif;
 
 // </BLOG>=========================================================================================================================
 
-// <ARTICLE>=========================================================================================================================
+// <ARTICLE>=======================================================================================================================
 
 .article {
 	max-width: 700px;
@@ -775,23 +774,69 @@ $fontFamily: 'Heebo', sans-serif;
 		font-weight: 700;
 		line-height: 50 / 34 * 100%;
 		margin: 0px 0px 30px 0px;
+		max-width: 500px;
+		@media (max-width: $md3) {
+			font-size: 3rem;
+			line-height: 40 / 34 * 100%;
+			max-width: 360px;
+		}
 	}
 	// .article__info
 	&__info {
 		display: flex;
-		align-items: center;
+		margin: 0px 0px 20px 0px;
 	}
 	// .article__year
 	&__year {
+		background: #FF7C7C;
+		border-radius: 16px;
+		height: 25px;
+		padding: 0 10px;
+		font-size: 1.8rem;
+		font-weight: 900;
 		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
 	}
 	// .article__category
 	&__category {
+		align-self: center;
+		font-size: 2rem;
+		line-height: 25 / 20 *100%;
+		margin: 0px 0px 0px 25px;
+		@media (max-width: $md3) {
+			font-size: 1.8rem;
+		}
 	}
 	// .article__text
 	&__text {
+		p {
+			@extend .text;   // підтягує стилі класу text
+			margin: 0px 0px 20px 0px;
+		}
+		img {
+			max-width: 100%;
+			margin: 0px 0px 20px 0px;
+		}
+		h2 {
+			font-size: 3rem;
+			font-weight: 500;
+			line-height: 60 / 30 *100%;
+			@media (max-width: $md3) {
+				font-size: 2.6rem;
+			}
+		}
+		h3 {
+			font-size: 2.4rem;
+			font-weight: 500;
+			line-height: 40 / 24 *100%;
+			margin: 0px 0px 10px 0px;
+			@media (max-width: $md3) {
+				font-size: 2rem;
+			}
+		}
 	}
 }
 
-
-// </ARTICLE>=========================================================================================================================
+// </ARTICLE>======================================================================================================================
